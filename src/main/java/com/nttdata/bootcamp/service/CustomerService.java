@@ -9,6 +9,8 @@ public interface CustomerService {
 
     Flux<Customer> findAll();
     Mono<Customer> findByDni(String dni);
+
+    Mono<Customer> findByName(String name);
     Mono<Customer> save(Customer customer);
     Mono<Customer> updateAddress(Customer dataCustomer);
     Mono<Customer> updateStatus(Customer dataCustomer);

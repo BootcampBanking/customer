@@ -39,6 +39,13 @@ public class CustomerController {
 	public Mono<Customer> findByClientDNI(@PathVariable("dni") String dni) {
 		LOGGER.info("Searching client by DNI: " + dni);
 		return customerService.findByDni(dni);
+
+	}
+
+	@GetMapping("/findByClientName/{name}")
+	public Mono<Customer> findByClientName(@PathVariable("name") String name) {
+		LOGGER.info("Searching client by name: " + name);
+		return customerService.findByDni(name);
 	}
 
 	//Save personal customer
