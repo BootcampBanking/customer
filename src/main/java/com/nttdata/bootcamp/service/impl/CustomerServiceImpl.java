@@ -55,6 +55,10 @@ public class CustomerServiceImpl implements CustomerService {
                 .next();*/
         return customer;
     }
+    @Override
+    public Mono<Customer> findByName(String name) {
+        return customerRepository.findByName(name);
+    }
 
     @Override
     public Mono<Customer> save(Customer dataCustomer) {
